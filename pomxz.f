@@ -1524,16 +1524,16 @@ c
 	   write(28,'(800g14.5)') (potvort(i,k),i=2,IM)
       enddo
 cjl	Mount an ASCII Buoyancy frequency file
-      open(29,file='bvfreq.DAT',status='unknown')
+c      open(29,file=FILENAME17,status='unknown')
       do k=1,kbm1
-	  write(29,'(800g14.5)') (bv2(i,k),i=2,IM)
+	  write(38,'(800g14.5)') (bv2(i,k),i=2,IM)
 	enddo
-	close(29)
-      open(29,file='dpotdx.DAT',status='unknown')
+	close(38)
+c      open(29,file=FILENAME18,status='unknown')
       do k=1,kbm1
-	  write(29,'(800g14.5)') (dpvortdx(i,k),i=2,IM)
+	  write(39,'(800g14.5)') (dpvortdx(i,k),i=2,IM)
 	enddo
-	close(29)
+	close(39)
       STOP
       END
 C****************************************************************************
@@ -1553,7 +1553,8 @@ cvc
       CHARACTER*26 FILENAME1,FILENAME2,FILENAME3,FILENAME4,
      1 FILENAME5,FILENAME6,FILENAME7,FILENAME8,FILENAME9,
      2 FILENAME10,FILENAME11,FILENAME12,FILENAME13,
-     3 FILENAME14, FILENAME15, FILENAME16
+     3 FILENAME14, FILENAME15, FILENAME16, FILENAME17,
+     4 FILENAME18
 cvc
       DIMENSION UTB(IM),VTB(IM),UTF(IM),VTF(IM),
      2       ADVUA(IM),ADVVA(IM),TSURF(IM),SSURF(IM),
@@ -1600,6 +1601,8 @@ c      CALL  DEPTH(Z,ZZ,DZ,DZZ,DZR,KB,KB-1)
       READ(10,'(A26)') FILENAME14
       READ(10,'(A26)') FILENAME15
       READ(10,'(A26)') FILENAME16
+      READ(10,'(A26)') FILENAME17
+      READ(10,'(A26)') FILENAME18
       close(10)
 cJL
 C     Setup the sigma levels for the SE Brazilian coast
@@ -1843,6 +1846,8 @@ cvc Arquivos de saida
       OPEN(34,FILE=FILENAME14,STATUS='UNKNOWN')
       OPEN(35,FILE=FILENAME15,STATUS='UNKNOWN')
       OPEN(37,FILE=FILENAME16,STATUS='UNKNOWN')
+      OPEN(38,FILE=FILENAME17,STATUS='UNKNOWN')
+      OPEN(39,FILE=FILENAME18,STATUS='UNKNOWN')
 c      OPEN(34,FILE='Tmean.DAT',STATUS='UNKNOWN')
 c      OPEN(35,FILE='Smean.DAT',STATUS='UNKNOWN')
 c      OPEN(37,FILE='Vmean.DAT',STATUS='UNKNOWN')

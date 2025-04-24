@@ -2,11 +2,11 @@ C--------------------------------------------------------------------------
 C POM - ENTRADA DE PARAMETROS
 C--------------------------------------------------------------------------
 C NUMERO TOTAL DE DIAS DA SIMULACAO
-2
+20
 C NUMERO DE DIAS NO PRIMEIRO MODO SELECIONADO
-1 1 1 1 1
+3 5 10 13 15
 C SEQUENCIA DE ENTRADA NO MOD0 PROG (MODE = 3) E DIAG (MODE = 4)
-4 3 3 3 3 3
+4 4 4 3 3 3
 C PASSO DE TEMPO DO MODE INTERNO (DTI) EM SEGUNDOS
 80
 C RAZAO ENTRE  DTI/DTE=ISPLIT !! TEM QUE SER INTEIRO !!

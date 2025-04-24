@@ -4,13 +4,13 @@ C ARQUIVO DE NIVEIS SIGMA (FILENAME1)
 sigma//sig101_ekman.sgm
 C               
 C BATIMETRIA (FILENAME2)
-sample//s2//bat.xhd
+sample//s1//bat.xhd
 C
 C CAMPO DE TEMPERATURA EM SIGMA (FILENAME3)
-sample//s2//Tsig.dat
+sample//s1//Tsig.dat
 C         
 C CAMPO DE SALINIDADE EM SIGMA (FILENAME4)
-sample//s2//Ssig.dat
+sample//s1//Ssig.dat
 C   
 C         
 C *********ARQUIVOS DE SAIDA   *************
@@ -27,3 +27,5 @@ output//diagnose.out                   SAIDA DE ENERGIA (FILENAME13)
 output//Tmean.dat                      TEMPERATURA MEDIA DIARIA (FILENAME14)
 output//Smean.dat                      SALINIDADE MEDIA DIARIA (FILENAME15)
 output//Vmean.dat                      VELOCIDADE MEDIA DIARIA (FILENAME16)
+output//bvfreq.dat                     FREQUENCIA DE BRUNT-VAISALLA (FILENAME17)
+output//dpotdx.DAT                     GRAD. VORTICIDADE POTENCIAL (FILENAME18)
