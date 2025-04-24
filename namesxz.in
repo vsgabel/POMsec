@@ -1,0 +1,29 @@
+C ********ARQUIVOS DE ENTRADA *************
+C 
+C ARQUIVO DE NIVEIS SIGMA (FILENAME1)
+sigma//sig101_ekman.sgm
+C               
+C BATIMETRIA (FILENAME2)
+sample//s2//bat.xhd
+C
+C CAMPO DE TEMPERATURA EM SIGMA (FILENAME3)
+sample//s2//Tsig.dat
+C         
+C CAMPO DE SALINIDADE EM SIGMA (FILENAME4)
+sample//s2//Ssig.dat
+C   
+C         
+C *********ARQUIVOS DE SAIDA   *************
+C
+output//X.DAT                          MATRIZ DE SAIDA EM X (FILENAME5)
+output//Z.DAT                          MATRIZ DE SAIDA EM Z (FILENAME6)
+output//TEMP.DAT                       SAIDA DE TEMPERATURA (FILENAME7)
+output//SAL.DAT                        SAIDA DE SALINIDADE (FILENAME8)
+output//DENS.DAT                       SAIDA DE DENSIDADE (FILENAME9)
+output//V_VEL.DAT                      SAIDA DE VELOCIDADE (meridional) (FILENAME10)
+output//POTVORT.DAT                    SAIDA DE VORTICIDADE POTENCIAL (FILENAME11)
+output//mooring.DAT                    SAIDA DE VEL E TEMP DE FUNDEIO (FILENAME12)
+output//diagnose.out                   SAIDA DE ENERGIA (FILENAME13) 
+output//Tmean.dat                      TEMPERATURA MEDIA DIARIA (FILENAME14)
+output//Smean.dat                      SALINIDADE MEDIA DIARIA (FILENAME15)
+output//Vmean.dat                      VELOCIDADE MEDIA DIARIA (FILENAME16)
