@@ -28,5 +28,10 @@
 
 # Executables
 *.exe
-*.out
 *.app
+*.x
+
+# Output exclusions
+output/*.dat
+output/*.out
+output/*.DAT
