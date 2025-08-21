@@ -334,7 +334,7 @@ c      MODE=3, inibido MODE=3 (prognostico) para MODE =4 (diagnostico) EM 19/10/
       READ(11,'(A2)') COMEN
       READ(11,*) KEYPRINT
       READ(11,'(A2)') COMEN
-      READ(11,*) PRTD1, PRENERGY
+      READ(11,*) PRENERGY
       READ(11,'(A2)') COMEN
       READ(11,*) VENTOSN
       close(11)
@@ -342,7 +342,7 @@ c      MODE=3, inibido MODE=3 (prognostico) para MODE =4 (diagnostico) EM 19/10/
 
 
       TIME=0.
-C      PRTD1=1
+      PRTD1=1
       ISWTCH=60
       IPRTD2=1
       ISPADV=1
@@ -1282,6 +1282,7 @@ Caninha da Rossa
     	   MPE=MPE/VTOT
          ENERGY(IENERGY) = MKE
          write(8,'(f9.4,2g16.6)') TIME,MKE,MPE
+         flush(8)
 
 c
 C  Cross-shore current and temperature diagnostic
@@ -1301,13 +1302,14 @@ c Calculating averaged variables over a prescribed period PERIODM
       IXMEAN = IXMEAN + 1
       DO K=1,KBM1
       DO I=1,IM
-          wmi(i,k)  = wmi(i,k)  + w(i,k)*coper
-          umi(i,k)  = umi(i,k)  + u(i,k)*coper
-          vmi(i,k)  = vmi(i,k)  + v(i,k)*coper
-          tmi(i,k)  = tmi(i,k)  + t(i,k)*coper
-          smi(i,k)  = smi(i,k)  + s(i,k)*coper
-          kmmi(i,k) = kmmi(i,k) + km(i,k)*coper
-          khmi(i,k) = khmi(i,k) + kh(i,k)*coper
+         wmi(i,k)  = wmi(i,k)  + w(i,k)*coper
+         umi(i,k)  = umi(i,k)  + u(i,k)*coper
+         vmi(i,k)  = vmi(i,k)  + v(i,k)*coper
+         tmi(i,k)  = tmi(i,k)  + t(i,k)*coper
+         smi(i,k)  = smi(i,k)  + s(i,k)*coper
+         kmmi(i,k) = kmmi(i,k) + km(i,k)*coper
+         khmi(i,k) = khmi(i,k) + kh(i,k)*coper
+
 cmc        UM(I,K)  = UM(I,K)  + U(I,K)*COPER
 cmc        VM(I,K)  = VM(I,K)  + V(I,K)*COPER
 cmc        TM(I,K)  = TM(I,K)  + T(I,K)*COPER
