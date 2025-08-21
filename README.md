@@ -2,6 +2,13 @@
 
 This is a bidimensional version of POMsec written by George Mellor in an unkown date, with the last comment by the author on May 19, 1994. It was provided to José Antonio Moreira Lima in March, 1996 by Patrick Marchesiello and has been subsequently used and modified by multiple researchers in the Ocean Dynamics Laboratory (LaDO) of the University of São Paulo. This model is not my own and, if requested, the repository will be made private. Support is not provided at this time.
 
+## Updates  
+### August 21, 2025  
+- Fixed issue with `PRTD1 = 1`. When using other values, daily means were underestimated. This variable was originally intended to allow visualization of mean fields of temperature, salinity, and velocity over intervals shorter than one day. This feature may be re-enabled in the future.  
+- Removed from `pomxz.in` the value that was being assigned to the `PRTD1` variable.  
+- Added a `flush` to the `diagnose.out` output after each `write` command, enabling near real-time visualization of both Mean Potential Energy and Mean Kinetic Energy.
+- Added `viewer.ipynb`, a notebook for easily visualizing output fields during model execution.
+
 ## Works
 - Soutelino, R. G. (2005). Caracterizaçao da estrutura baroclınica do sistema de correntes de contorno oeste ao largo da costa leste brasileira. Trabalho de Graduaçao (Graduaçao em Oceanografia)-Departamento de Oceanografia, Instituto de Geociências, Centro de Tecnologia e Ciências Universidade do Estado do Rio de Janeiro, Rio de Janeiro, RJ, 50pp.
 - Schmidt, A. C. K., Belo, W. C., Silveira, I. C. A. D., & Lima, J. A. M. (2007). Modelo paramétrico analítico para a estrutura de velocidade do sistema corrente do Brasil. Revista Brasileira de Geofísica, 25, 75-91.
